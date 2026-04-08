@@ -1,16 +1,16 @@
 # Configurations
-title:            Jekyll Gitbook
-longtitle:        Jekyll Gitbook
-author:           HE Tao
-email:            sighingnow@gmail.com
+title:            Dor0r0 Blog
+longtitle:        Dor0r0 Blog
+author:           Dor0r0
+email:            kjs36202@naver.com
 description: >
-  Build Jekyll site with the GitBook style.
+  개발 메모와 작업 기록을 정리하는 GitBook 스타일 블로그입니다.
 
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://sighingnow.github.io'
-baseurl:          '/jekyll-gitbook'
+url:              'https://kjs36202.github.io'
+baseurl:          '/Dor0r0.github.io'
 rss:              RSS
 
 # bootstrap: use the remote theme for the site itself
@@ -70,5 +70,4 @@ regenerate:       true
 
 plugins:
   - jekyll-feed
-  - jekyll-readme-index
   - jemoji
