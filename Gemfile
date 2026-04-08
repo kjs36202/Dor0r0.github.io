@@ -2,5 +2,11 @@
 
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.4"
-gem "webrick", "~> 1.9"
+git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
+gem "jekyll"
+gem 'jekyll-feed'
+gem 'jekyll-readme-index'
+gem 'jemoji'
+gem 'webrick'
+
+# gem "rails"
