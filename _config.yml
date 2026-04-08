@@ -10,8 +10,8 @@ description: >
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://kjs36202.github.io'
-baseurl:          '/Dor0r0.github.io'
+url:              'https://dor0r0.github.io'
+baseurl:          ''
 rss:              RSS
 
 # bootstrap: use the remote theme for the site itself

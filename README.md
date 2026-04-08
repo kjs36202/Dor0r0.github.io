@@ -4,7 +4,7 @@ GitHub Pages로 배포하는 Jekyll 블로그입니다.
 
 배포 주소:
 
-- `https://kjs36202.github.io/Dor0r0.github.io/`
+- `https://dor0r0.github.io/`
 
 로컬 실행:
 

@@ -8,5 +8,5 @@ layout: post
 
 연락이나 확인이 필요하면 아래 링크를 참고하면 됩니다.
 
-- GitHub: [kjs36202](https://github.com/kjs36202)
+- GitHub: [Dor0r0](https://github.com/Dor0r0)
 - Email: [kjs36202@naver.com](mailto:kjs36202@naver.com)
