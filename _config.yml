@@ -62,6 +62,22 @@ ordered_collections:
   - posts
   - pages
 
+category_nav:
+  - slug: pwn
+    title: Pwn
+  - slug: rev
+    title: Rev
+  - slug: web
+    title: Web
+  - slug: crypto
+    title: Crypto
+
+menu_pages:
+  - title: 소개
+    url: /pages/about/
+  - title: 연락처
+    url: /pages/contact/
+
 page_width: 800px
 
 destination:      ./_site

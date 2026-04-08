@@ -2,7 +2,7 @@
 title: 첫 글
 author: Dor0r0
 date: 2026-04-08
-category: note
+category: web
 layout: post
 ---
 
