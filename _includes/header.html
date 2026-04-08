@@ -1,0 +1,14 @@
+<header class="site-header d-flex flex-column flex-lg-row gap-3 align-items-lg-end pb-4 mb-5">
+  <div class="site-brand">
+    <p class="brand-kicker mb-1">GitHub Pages</p>
+    <a href="{{ '/' | relative_url }}" class="brand-title text-decoration-none">
+      {{ site.title }}
+    </a>
+    <p class="site-summary mb-0">{{ site.description }}</p>
+  </div>
+  <nav class="nav-menu d-flex flex-wrap ms-lg-auto">
+    {% for item in site.data.settings.menu %}
+      <a class="nav-link-custom" href="{{ item.url | relative_url }}">{{ item.name }}</a>
+    {% endfor %}
+  </nav>
+</header>

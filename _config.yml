@@ -1,0 +1,18 @@
+lang: ko-KR
+timezone: Asia/Seoul
+url: "https://kjs36202.github.io"
+baseurl: "/Dor0r0.github.io"
+title: "Dor0r0 Blog"
+description: "개발 메모와 작업 기록을 정리하는 개인 블로그"
+permalink: /:year/:month/:day/:title/
+markdown: kramdown
+future: false
+
+kramdown:
+  input: GFM
+
+exclude:
+  - README.md
+  - LICENSE.txt
+  - screenshot.png
+  - CHANGELOG.md

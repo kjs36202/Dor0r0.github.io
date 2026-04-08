@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<section class="hero-card mb-5">
+  <p class="eyebrow mb-2">Personal Notes</p>
+  <h1 class="hero-title">{{ page.hero_title | default: site.title }}</h1>
+  <div class="hero-copy">
+    {{ content }}
+  </div>
+</section>
+
+<section class="mb-5">
+  <div class="section-heading d-flex flex-column flex-md-row gap-3 align-items-md-end justify-content-between border-bottom pb-3 mb-4">
+    <div>
+      <p class="eyebrow mb-1">Latest Posts</p>
+      <h2 class="section-title mb-0">최근 글</h2>
+    </div>
+    <a href="{{ '/archive/' | relative_url }}" class="section-link">전체 글 보기</a>
+  </div>
+
+  {% if site.posts.size > 0 %}
+    <div class="vstack gap-3">
+      {% for post in site.posts limit: 6 %}
+        <article class="post-card">
+          <p class="post-meta mb-2">{{ post.date | date: "%Y.%m.%d" }}</p>
+          <h3 class="post-card-title">
+            <a href="{{ post.url | relative_url }}" class="text-decoration-none">{{ post.title }}</a>
+          </h3>
+          <p class="post-card-excerpt mb-0">{{ post.excerpt | strip_html | strip | truncate: 160 }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="empty-state">
+      <p class="mb-0">아직 작성된 글이 없습니다. `_posts`에 첫 글을 추가해 보세요.</p>
+    </div>
+  {% endif %}
+</section>

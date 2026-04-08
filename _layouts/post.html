@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<article class="content-block">
+  <header class="content-header">
+    <p class="post-meta mb-2">{{ page.date | date: "%Y.%m.%d" }}</p>
+    <h1 class="page-title">{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="page-description">{{ page.description }}</p>
+    {% endif %}
+  </header>
+  <div class="content-body post-body">
+    {{ content }}
+  </div>
+</article>
