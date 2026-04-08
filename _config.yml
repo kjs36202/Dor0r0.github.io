@@ -79,6 +79,7 @@ menu_pages:
     url: /pages/contact/
 
 page_width: 800px
+show_copy_code_button: false
 
 destination:      ./_site
 incremental:      false
