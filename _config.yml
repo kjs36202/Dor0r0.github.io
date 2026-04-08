@@ -72,6 +72,10 @@ category_nav:
   - slug: crypto
     title: Crypto
 
+subcategory_nav:
+  - slug: ctf
+    title: CTF
+
 menu_pages:
   - title: 소개
     url: /pages/about/

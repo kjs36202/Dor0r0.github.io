@@ -51,6 +51,7 @@
             {% for category in site.category_nav %}
                 {% assign category_url = site.baseurl | append: '/categories/' | append: category.slug | append: '/' %}
                 {% assign category_posts = site.posts | where_exp: "post", "post.category == category.slug or post.categories contains category.slug" %}
+                {% assign uncategorized_posts = category_posts | where_exp: "post", "post.subcategory == nil or post.subcategory == ''" %}
                 {% assign category_active = false %}
                 {% if page.category_key == category.slug or page.category == category.slug or page.categories contains category.slug %}
                     {% assign category_active = true %}
@@ -65,9 +66,46 @@
                         {{ category.title }}
                     </a>
 
-                    {% if category_posts.size > 0 %}
+                    {% if site.subcategory_nav.size > 0 or uncategorized_posts.size > 0 %}
                     <ul class="articles">
-                        {% for post in category_posts %}
+                        {% for subcategory in site.subcategory_nav %}
+                            {% assign subcategory_url = category_url | append: subcategory.slug | append: '/' %}
+                            {% assign subcategory_posts = category_posts | where_exp: "post", "post.subcategory == subcategory.slug" %}
+                            {% assign subcategory_active = false %}
+                            {% if page.subcategory_key == subcategory.slug or page.subcategory == subcategory.slug %}
+                                {% if category_active %}
+                                    {% assign subcategory_active = true %}
+                                {% endif %}
+                            {% endif %}
+
+                            {% if subcategory_active %}
+                            <li class="chapter active" data-level="1.1.1" data-path="{{ subcategory_url }}">
+                            {% else %}
+                            <li class="chapter" data-level="1.1.1" data-path="{{ subcategory_url }}">
+                            {% endif %}
+                                <a href="{{ subcategory_url }}" onclick="pageScrollToTop(this)">
+                                    {{ subcategory.title }}
+                                </a>
+
+                                {% if subcategory_posts.size > 0 %}
+                                <ul class="articles">
+                                    {% for post in subcategory_posts %}
+                                        {% if page.url == post.url %}
+                                        <li class="chapter active" data-level="1.1.1.1" data-path="{{site.baseurl}}{{post.url}}">
+                                        {% else %}
+                                        <li class="chapter" data-level="1.1.1.1" data-path="{{site.baseurl}}{{post.url}}">
+                                        {% endif %}
+                                            <a href="{{site.baseurl}}{{post.url}}" onclick="pageScrollToTop(this)">
+                                                {{ post.title | escape }}
+                                            </a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+
+                        {% for post in uncategorized_posts %}
                             {% if page.url == post.url %}
                             <li class="chapter active" data-level="1.1.1" data-path="{{site.baseurl}}{{post.url}}">
                             {% else %}
