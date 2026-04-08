@@ -3,6 +3,7 @@ title:            Dor0r0 Blog
 longtitle:        Dor0r0 Blog
 author:           Dor0r0
 email:            kjs36202@naver.com
+lang:             ko
 description: >
   개발 메모와 작업 기록을 정리하는 GitBook 스타일 블로그입니다.
 
@@ -48,19 +49,18 @@ permalink:                /:categories/:year-:month-:day-:title:output_ext
 
 exclude:
   - _drafts
+  - README.md
+  - LICENSE
+  - LICENSE.txt
 
 collections:
   pages:
-    output: true
-    permalink: /:collection/:path/
-  others:
     output: true
     permalink: /:collection/:path/
 
 ordered_collections:
   - posts
   - pages
-  - others
 
 page_width: 800px
 

@@ -1,6 +1,6 @@
 ---
 layout: home
-title: "Home"
+title: "홈"
 hero_title: "작은 기록을 오래 남기는 블로그"
 description: "개발 메모와 작업 기록을 쌓아가는 첫 페이지"
 ---

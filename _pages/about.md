@@ -1,9 +1,15 @@
 ---
-title: About
-author: Tao He
-date: 2022-02-04
-category: Jekyll
+title: 소개
+author: Dor0r0
+date: 2026-04-08
+category: page
 layout: post
 ---
 
-This is an about page.
+이 블로그는 개발하면서 마주친 문제와 해결 과정을 차근차근 남기는 공간입니다.
+
+주로 아래 내용을 정리합니다.
+
+- 배포하면서 겪은 시행착오
+- 개발 중 막혔던 문제와 해결 방법
+- 나중에 다시 찾아볼 짧은 메모

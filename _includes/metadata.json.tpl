@@ -40,7 +40,7 @@
             },
         },
         "theme": "default",
-        "author": "Tao He",
+        "author": "{{ page.author | default: site.author }}",
         "pdf": {
             "pageNumbers": true,
             "fontSize": 12,
@@ -61,7 +61,7 @@
         },
         "variables": {},
         "title": "{{site.title}}",
-        "language": "en",
+        "language": "{{ site.lang | default: 'ko' }}",
         "gitbook": "*"
     },
     "file": {
